@@ -1,4 +1,3 @@
-
 # SD_Bank_Bot
 
 ## English (EN-USA)
@@ -14,19 +13,46 @@
 - **Fund Transfer**: Ability to transfer Buks between accounts.
 - **Withdrawal Request**: Users can request to withdraw Buks to real currency.
 
+### Technical Details
+
+- **Programming Language**: Python
+- **Libraries Used**:
+  - `aiogram`: for interacting with the Telegram API and managing the bot.
+  - `mysql.connector`: for working with a MySQL database.
+  - `datetime`: for handling date and time.
+
+Example of imports:
+
+```python
+from aiogram import Bot, Dispatcher, F, Router
+from aiogram.types import Message, CallbackQuery
+from aiogram.filters import CommandStart, Command
+from aiogram.fsm.state import State, StatesGroup
+from aiogram.fsm.context import FSMContext
+from bas.base import mycursor, mydb
+import app.keyboards as kb
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
+from app.keyboards import create_tasks_keyboard
+import datetime as dt
+import mysql.connector
+```
+
 ### Installation and Setup
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/YourUsername/SD_Bank_Bot.git
    cd SD_Bank_Bot
    ```
 
 2. **Database Setup**:
+
    - Start your MySQL database.
    - Enter the correct database details in the `base.py` file.
 
 3. **Install Dependencies**:
+
    - Ensure you have Python 3.6 or later installed.
    - Install the required dependencies using pip:
      ```bash
@@ -62,16 +88,19 @@ If you have any questions or suggestions, feel free to contact the developer:
 ### Установка и запуск
 
 1. **Клонирование репозитория**:
+
    ```bash
    git clone https://github.com/YourUsername/SD_Bank_Bot.git
    cd SD_Bank_Bot
    ```
 
 2. **Настройка базы данных**:
+
    - Запустите MySQL базу данных.
    - Внесите корректные данные базы в файл `base.py`.
 
 3. **Установка зависимостей**:
+
    - Убедитесь, что у вас установлен Python 3.6 или выше.
    - Установите зависимости с помощью pip:
      ```bash
@@ -107,16 +136,19 @@ If you have any questions or suggestions, feel free to contact the developer:
 ### Встановлення та налаштування
 
 1. **Клонування репозиторію**:
+
    ```bash
    git clone https://github.com/YourUsername/SD_Bank_Bot.git
    cd SD_Bank_Bot
    ```
 
 2. **Налаштування бази даних**:
+
    - Запустіть базу даних MySQL.
    - Внесіть правильні дані бази у файл `base.py`.
 
 3. **Встановлення залежностей**:
+
    - Переконайтеся, що у вас встановлено Python 3.6 або пізнішу версію.
    - Встановіть необхідні залежності за допомогою pip:
      ```bash
@@ -152,16 +184,19 @@ If you have any questions or suggestions, feel free to contact the developer:
 ### Instalación y Configuración
 
 1. **Clonar el repositorio**:
+
    ```bash
    git clone https://github.com/YourUsername/SD_Bank_Bot.git
    cd SD_Bank_Bot
    ```
 
 2. **Configuración de la base de datos**:
+
    - Inicia tu base de datos MySQL.
    - Ingresa los datos correctos de la base de datos en el archivo `base.py`.
 
 3. **Instalar Dependencias**:
+
    - Asegúrate de tener instalado Python 3.6 o posterior.
    - Instala las dependencias necesarias usando pip:
      ```bash
